@@ -1,0 +1,32 @@
+{
+    "tasks": [
+        {
+            "id": 1,
+            "title": "Make Vue App",
+            "description": "A task manager app in \"pure\" Vue",
+            "tags": ["programing", "learning"],
+            "status": "done"
+        },
+        {
+            "id": 2,
+            "title": "Cleaning",
+            "description": "Weekly cleaning of the house",
+            "tags": ["maintenance"],
+            "status": "to do"
+        },
+        {
+            "id": 3,
+            "title": "English refresh",
+            "description": "Practice phrasal werbs",
+            "tags": ["learning"],
+            "status": "to do"
+        },
+        {
+            "id": 4,
+            "title": "Feed the casts",
+            "description": "",
+            "tags": ["maintenance"],
+            "status": "done"
+        }
+    ]
+}

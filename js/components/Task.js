@@ -1,0 +1,45 @@
+export default {
+    template: `
+    <li class="border rounded border-zinc-300 drop-shadow-md">
+        <h3 
+            class="bg-zinc-50 px-4 py-1 border-b rounded-t flex justify-between items-center"
+            :class="{'rounded-b':!expanded}"
+        >
+            <span
+                class="cursor-pointer grow"
+                @click="$emit('showModal', task.id)"
+            >{{task.title}}</span>
+            <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                xmlns:xlink="http://www.w3.org/1999/xlink" 
+                x="0px" y="0px" width="20px" height="20px" 
+                viewBox="0 0 960 560" 
+                enable-background="new 0 0 960 560" 
+                xml:space="preserve"
+                class="inline cursor-pointer transition-transform" 
+                :class="{'rotate-180':expanded}"
+                @click="expanded=!expanded"
+                v-show="task.description"
+            >
+                <g id="Rounded_Rectangle_33_copy_4_1_">
+                    <path d="M480,344.181L268.869,131.889c-15.756-15.859-41.3-15.859-57.054,0c-15.754,15.857-15.754,41.57,0,57.431l237.632,238.937   c8.395,8.451,19.562,12.254,30.553,11.698c10.993,0.556,22.159-3.247,30.555-11.698l237.631-238.937   c15.756-15.86,15.756-41.571,0-57.431s-41.299-15.859-57.051,0L480,344.181z"/>
+                </g>
+            </svg>
+        </h3>
+        
+        <p 
+            class="px-5 py-3 text-sm cursor-pointer bg-zinc-100 rounded-b" 
+            v-show="task.description&&expanded"
+            @click="$emit('showModal', task.id)"
+            >{{task.description}}</p>
+    </li>
+    `, 
+    props: {
+        task: Object
+    }, 
+    data () {
+        return {
+            expanded: false
+        }
+    }
+}
